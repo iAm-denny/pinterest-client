@@ -57,7 +57,7 @@ function Detail(props) {
   function displayImage() {
     console.log(data);
     if (loading) {
-      return <div className="loading"></div>;
+      return <div>Loading</div>;
     }
     if (data) {
       const base64 = data.specificImage.image;

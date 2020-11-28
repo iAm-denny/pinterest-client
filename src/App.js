@@ -13,7 +13,7 @@ const client = new ApolloClient({
   uri: "https://pinterest--clone.herokuapp.com/graphql",
   cache: new InMemoryCache(),
   cors: {
-    origin: "https://gracious-jackson-1fabb7.netlify.app/",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
