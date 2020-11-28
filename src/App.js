@@ -10,12 +10,12 @@ import Post from "./components/Post";
 import { LoginContext, UserContext } from "./Helper/Context";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: "https://pinterest--clone.herokuapp.com/graphql",
   cache: new InMemoryCache(),
-  cors: {
-    origin: "http://localhost:3000",
-    credentials: true,
-  },
+  // cors: {
+  //   origin: "http://localhost:3000",
+  //   credentials: true,
+  // },
 });
 
 function App() {
