@@ -8,7 +8,12 @@ function Navbar() {
   const { loggedIn, setLoggedIn } = useContext(LoginContext)
   const { userProfile, setUserProfile } = useContext(UserContext)
   const cookies = new Cookies();
-  
+
+    if(window.sessionStorage.getItem("loggedIn") === "true") {
+      setLoggedIn(true)
+      setUserProfile(window.sessionStorage.getItem("userImg"))
+    }
+
   const logout = () => {
     cookies.remove("userid");
     window.location.href = "/login";
